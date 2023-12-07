@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+          xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head th:fragment="head">
+	<title>Firulais</title>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+	<link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
+	<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+	<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+        <script src="js/rutinas.js"></script>
+</head>
+<body>
+
+<aside th:fragment="menu">
+    <div id="home"><h1>FideFlights</h1></div>
+    <a href="/"> <button class="btnMenu">Inicio</button></a>
+    <a href="/reservas"> <button class="btnMenu">Reservas</button></a>
+    <a href="/logout"> <button class="btnMenu">Salir</button></a>
+</aside>
+    
+
+<footer th:fragment="footer">
+
+</footer>
+</body>
+</html>

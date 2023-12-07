@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head th:replace="~{layout/plantilla :: head}">
+    <title>TechShop</title>
+</head>
+<body>
+    <div class="cont">
+        <aside th:replace="~{layout/plantilla :: menu}"/>
+        <section>
+            <h1>Nuestros Vuelos</h1>
+            <hr>
+            <div class="vuelo" th:each="vuelo, contador : ${vuelos}">
+                <h1>[[${vuelo.destino}]] - [[${vuelo.numero_vuelo}]]
+                    <a th:href="@{/vuelo/reservar/{id}(id=${vuelo.id})}">
+                        <button class="btnVuelo">Reservar</button>
+                    </a>
+                </h1>
+                <h3>[[${vuelo.lugar_salida}]] [[${vuelo.fecha_salida}]] - [[${vuelo.fecha_llegada}]]</h3>
+                
+                <hr>
+            </div>
+
+        </section>
+        
+    </div>
+    <footer th:replace="~{layout/plantilla :: footer}"/>
+</body>
+</html>
